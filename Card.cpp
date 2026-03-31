@@ -37,6 +37,40 @@ Card::~Card() {
     cout << "Closed card: " << number << endl;
 }
 
+int Card::getNumber() {
+    return number;
+}
+
+const char * Card::getName() {
+    return name;
+}
+
+const char * Card::getDate() {
+    return date;
+}
+
+void Card::setPin(int oldPin, int newPin) {
+    if (oldPin == pin ) {
+        pin = newPin;
+    }else {
+        cout << "Error: incorrect pin!\n";
+    }
+}
+
+int Card::getPin() {
+    return pin;
+}
+
+float Card::getCash() {
+    return cash;
+}
+
+void Card::topupBalance(float money) {
+}
+
+void Card::withdrawBalance(float money) {
+}
+
 void Card::showInfo() {
     cout << "+++++++++++++++++++++++++++++++++++++++\n";
     cout << "| Client: " << name << endl;
