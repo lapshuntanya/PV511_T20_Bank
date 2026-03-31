@@ -44,7 +44,37 @@ int main() {
         cin >> menu;
 
         switch (menu) {
-
+            case 1: {
+                //cout << "Current balance: " << (*pObj).getCash() << endl;
+                cout << "Current balance: " << pObj->getCash() << endl;
+                break;
+            }
+            case 2: {
+                int a, b;
+                cout << "Input old PIN: "; cin >> a;
+                cout << "Input new PIN: "; cin >> b;
+                pObj->setPin(a, b);
+                cout << "Current PIN: " << pObj->getPin() << endl;
+                break;
+            }
+            case 3: {
+                cout << "Current balance: " << pObj->getCash() << endl;
+                int a = 0;
+                cout << "Input money: "; cin >> a;
+                pObj->topupBalance(a);
+                cout << "Current balance: " << pObj->getCash() << endl;
+                break;
+            }
+            case 4: {
+                cout << "Current balance: " << pObj->getCash() << endl;
+                int a = 0;
+                cout << "Input money: "; cin >> a;
+                pObj->withdrawBalance(a);
+                cout << "Current balance: " << pObj->getCash() << endl;
+                break;
+            }
+            case 5: pObj->showInfo(); break;
+            case 0: delete pObj; break;
         }
     }while (menu!=0);
 
