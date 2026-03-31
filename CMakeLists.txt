@@ -3,4 +3,6 @@ project(PV511_T20_Bank)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(PV511_T20_Bank main.cpp)
+add_executable(PV511_T20_Bank main.cpp
+        Card.cpp
+        Card.h)
