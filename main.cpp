@@ -24,6 +24,7 @@ int main() {
         pObj = new Card(); //Конструктор за замовчуванням
     }else if (menu == 2) {
         cout << "Input your name: ";
+        cin.ignore();
         cin.getline(tmp, 100);
         pObj = new Card(tmp); //Конструктор з параметрами
     }
