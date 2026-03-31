@@ -66,9 +66,21 @@ float Card::getCash() {
 }
 
 void Card::topupBalance(float money) {
+    if (money > 0) {
+        cash += money;
+    }
+    else {
+        cout << "Error: incorrect money!\n";
+    }
 }
 
 void Card::withdrawBalance(float money) {
+    if (cash >= money && money > 0) {
+        cash -= money;
+    }
+    else {
+        cout << "Error: incorrect money!\n";
+    }
 }
 
 void Card::showInfo() {
