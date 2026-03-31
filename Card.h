@@ -25,6 +25,17 @@ public:
     Card(const char* name); //Конструктор за параметрами
     ~Card(); //Деструктор
 
+    //Аксесори = Сетери+гетери
+    int getNumber(); //-set, +get
+    const char* getName(); //-set, +get
+    const char* getDate(); //-set, +get
+    void setPin(int oldPin, int newPin); //+set
+    int getPin(); //+get
+    float getCash();// -set, +get
+
+    void topupBalance(float money); //Поповнити рахунок
+    void withdrawBalance(float money); //Зняти з рахунку
+
     //Звичайні методи
     void showInfo();
 };
